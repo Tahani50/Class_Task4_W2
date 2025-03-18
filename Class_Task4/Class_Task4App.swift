@@ -9,9 +9,11 @@ import SwiftUI
 
 @main
 struct Class_Task4App: App {
+    @StateObject var viewModel = TaskModelView()
     var body: some Scene {
         WindowGroup {
             ContentView()
+                .environmentObject(viewModel)
         }
     }
 }
